@@ -1,0 +1,19 @@
+#! /usr/bin/env Rscript
+# Alison Bo Wen
+# AlisonBoWen@gmail.com
+# cat("in R function\n")
+
+input <- file("stdin", "r")
+
+currentLine <-readLines(input, n=1, warn=FALSE)
+fields <- strsplit(currentLine, "\t")[[1]]
+word <- fields[1]
+val <- fields[2]
+
+cat(word," - word \n")
+cat(val," - val \n")
+
+while (length(currentLine <-readLines(input, n=1, warn=FALSE))>0){
+	fields <- strsplit(currentLine, "\t")[[1]]
+	cat(fields)
+}	
